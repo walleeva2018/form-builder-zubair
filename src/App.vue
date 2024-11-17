@@ -23,6 +23,13 @@ import { RouterView } from 'vue-router'
     </RouterLink>
     <RouterLink
       exactActiveClass="has-text-primary has-background-light"
+      to="/playground"
+      class="navbar-item has-text-dark has-text-weight-medium"
+    >
+      Playground
+    </RouterLink>
+    <RouterLink
+      exactActiveClass="has-text-primary has-background-light"
       to="/about"
       class="navbar-item has-text-dark has-text-weight-medium"
     >

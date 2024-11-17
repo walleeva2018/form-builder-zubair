@@ -26,6 +26,11 @@ const router = createRouter({
       component: () => import('../views/FormView.vue')
     },
     {
+      path: '/playground',
+      name: 'Playground',
+      component: () => import('../views/PlaygroudView.vue')
+    },
+    {
       path: '/:pathMatch(.*)*',
       name: 'NotFound',
       component: () => import('../views/NotFound.vue')
