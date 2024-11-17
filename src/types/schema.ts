@@ -35,7 +35,7 @@ interface BaseCommon {
 }
 
 export interface Input extends BaseCommon {
-  type: 'input'
+  type: 'input' | 'date'
 }
 
 export interface TextArea extends BaseCommon {

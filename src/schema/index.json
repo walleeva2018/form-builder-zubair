@@ -351,7 +351,7 @@
           "type": "string"
         },
         "type": {
-          "const": "input",
+          "enum": ["input", "date"],
           "type": "string"
         },
         "validation": {

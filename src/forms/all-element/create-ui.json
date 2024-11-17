@@ -39,6 +39,12 @@
           "validation": { "type": "required" }
         },
         {
+          "type": "date",
+          "label": "Birth Date",
+          "schema": "schema/properties/userinfo/properties/bornDate",
+          "validation": { "type": "required" }
+        },
+        {
           "type": "select",
           "label": "Country",
           "options": ["bangladesh", "india", "nepal"],

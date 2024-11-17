@@ -43,7 +43,7 @@ const { setValue, deleteValue } = useGlobalModel()
 
   <!-- Simple Element -->
   <TheInput
-    v-else-if="el.type === 'input'"
+    v-else-if="el.type === 'input' || el.type === 'date'"
     :element="el"
     :parent-data="cData"
     :set-value="setValue"

@@ -70,6 +70,10 @@ const inputType = computed(() => {
   const format = get(wholeSchema, formatPath)
   if (type === 'integer') return 'number'
   else if (type === 'string' && format === 'password') return 'password'
+  else if (props.element.type === 'date') {
+    hoist()
+    return 'date'
+  }
   return 'text'
 })
 
@@ -110,11 +114,17 @@ onUnmounted(() => {
       @focusout="unHoist"
     />
     <span v-if="inputType === 'password'" class="eye" data-testid="ac-input-text-hide-value">
-      <i v-if="showPassword" @click="showPassword = false" class="fa is-flex"><EyeSlash /></i>
-      <i v-else class="fa is-flex" @click="showPassword = true"><TheEye /></i>
+      <i v-if="showPassword" @click="showPassword = false" class="fa is-flex">
+        <EyeSlash />
+      </i>
+      <i v-else class="fa is-flex" @click="showPassword = true">
+        <TheEye />
+      </i>
     </span>
     <p v-if="err" class="has-text-danger is-flex gap-4 mt-2">
-      <span class="width-16 is-flex"> <ExclamationTriangle /></span>
+      <span class="width-16 is-flex">
+        <ExclamationTriangle />
+      </span>
       <span>{{ err }}</span>
     </p>
   </div>
